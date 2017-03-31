@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
+
+    <style>
+        *{maigin:0;padding:0}
+        #t1 {
+            border: solid 1px red;
+            border-collapse: collapse;
+        }
+        #t1 th {
+            border:solid 2px blue;
+        }
+        #t1 td {
+            /*display: table-cell;*/
+            border:solid 1px blue;
+            /*border-collapse: collapse;*/
+        }
+        #tb>tr:nth-of-type(2n+1){
+            background-color: green;
+        }
+        #tb>tr:nth-of-type(n):hover{
+                   background-color: yellow;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div ng-app="">
+        <p>名字:<input type="text" ng-model="name"></p>
+        <h1>HELLO{{name}}</h1>
+    </div>
+    <!--实例讲解：
+当网页加载完毕，AngularJS 自动开启。
+ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的"所有者"。
+ng-model 指令把输入域的值绑定到应用程序变量 name。
+ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTML。-->
+<!--<div ng-app="">-->
+    <!--<p>name: <input type="text" ng-model="name"></p>-->
+    <!--<h2>Hello!{{name}}</h2>-->
+<!--</div>-->
+<table id="t1">
+    <thead>
+        <tr>
+            <th>A1</th>
+            <th>B2</th>
+            <th>C3</th>
+            <th>D4</th>
+            <th>E5</th>
+            <th>F6</th>
+            <th>G7</th>
+            <th>H8</th>
+        </tr>
+    </thead>
+    <tbody id="tb">
+    <tr>
+        <td>第一行1</td>
+        <td>第一行2</td>
+        <td>第一行3</td>
+        <td>第一行4</td>
+        <td>第一行5</td>
+        <td>第一行6</td>
+        <td>第一行7</td>
+        <td>第一行8</td>
+    </tr>
+    <tr>
+        <td>第二行1</td>
+        <td>第二行2</td>
+        <td>第二行3</td>
+        <td>第二行4</td>
+        <td>第二行5</td>
+        <td>第二行6</td>
+        <td>第二行7</td>
+        <td>第二行8</td>
+    </tr>
+    <tr>
+        <td>第三行1</td>
+        <td>第三行2</td>
+        <td>第三行3</td>
+        <td>第三行4</td>
+        <td>第三行5</td>
+        <td>第三行6</td>
+        <td>第三行7</td>
+        <td>第三行8</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
